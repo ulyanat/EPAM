@@ -1,0 +1,167 @@
+{
+	"info": {
+		"name": "sample",
+		"_postman_id": "984ff704-2236-f8e6-cee3-a94d46b1cb83",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://fakerestapi.azurewebsites.net/api/Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/Books",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://fakerestapi.azurewebsites.net/api/Books",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ID\": 0,\r\n  \"Title\": \"string\",\r\n  \"Description\": \"string\",\r\n  \"PageCount\": 0,\r\n  \"Excerpt\": \"string\",\r\n  \"PublishDate\": \"2017-12-03T15:02:13.567Z\"\r\n}"
+				},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/Books",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://fakerestapi.azurewebsites.net/api/Books/964807713543502",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/Books/964807713543502",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Books",
+						"964807713543502"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://fakerestapi.azurewebsites.net/api/Books/666624680067334",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ID\": 0,\r\n  \"Title\": \"string\",\r\n  \"Description\": \"string\",\r\n  \"PageCount\": 0,\r\n  \"Excerpt\": \"string\",\r\n  \"PublishDate\": \"2017-12-03T15:02:13.567Z\"\r\n}"
+				},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/Books/666624680067334",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Books",
+						"666624680067334"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://auth-demo.aerobatic.io/protected-standard/",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "aerobatic",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "aerobatic",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://auth-demo.aerobatic.io/protected-standard/",
+					"protocol": "https",
+					"host": [
+						"auth-demo",
+						"aerobatic",
+						"io"
+					],
+					"path": [
+						"protected-standard",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

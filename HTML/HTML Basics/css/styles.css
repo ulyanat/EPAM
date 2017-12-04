@@ -1,0 +1,45 @@
+body{
+	background: url(../img/article82.jpg) repeat center fixed;
+	background-size: cover;
+	font-size: 18px;
+	font-family: 'Comic Sans MS';
+	line-height: 1.5;
+	text-align: left;
+}
+
+#big-wrapper{
+	max-width: 1200px;
+    margin: 30px auto;
+	padding: 0 30px;
+    overflow: hidden;
+	background: white;
+
+}
+.wrapper{
+	width: 31%;
+	margin: 1% 2% 1% 0;
+	float: left;
+}
+#my-photo img{
+	width: 100%;
+}
+
+#second-text span{
+	display: block;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 4px;
+	text-align: left;
+} 
+
+form p{
+	margin: 0;
+	padding: 0;
+}
+
+input{
+	margin: 5px;
+}
+

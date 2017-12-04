@@ -67,7 +67,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "https://fakerestapi.azurewebsites.net/api/Books/964807713543502",
+					"raw": "https://fakerestapi.azurewebsites.net/api/Books/92",
 					"protocol": "https",
 					"host": [
 						"fakerestapi",
@@ -77,7 +77,7 @@
 					"path": [
 						"api",
 						"Books",
-						"964807713543502"
+						"92"
 					]
 				},
 				"description": ""
@@ -96,10 +96,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"ID\": 0,\r\n  \"Title\": \"string\",\r\n  \"Description\": \"string\",\r\n  \"PageCount\": 0,\r\n  \"Excerpt\": \"string\",\r\n  \"PublishDate\": \"2017-12-03T15:02:13.567Z\"\r\n}"
+					"raw": "{\r\n  \"ID\": 6,\r\n  \"Title\": \"string\",\r\n  \"Description\": \"string\",\r\n  \"PageCount\": 0,\r\n  \"Excerpt\": \"string\",\r\n  \"PublishDate\": \"2017-12-03T15:02:13.567Z\"\r\n}"
 				},
 				"url": {
-					"raw": "https://fakerestapi.azurewebsites.net/api/Books/666624680067334",
+					"raw": "https://fakerestapi.azurewebsites.net/api/Books/6",
 					"protocol": "https",
 					"host": [
 						"fakerestapi",
@@ -109,7 +109,7 @@
 					"path": [
 						"api",
 						"Books",
-						"666624680067334"
+						"6"
 					]
 				},
 				"description": ""

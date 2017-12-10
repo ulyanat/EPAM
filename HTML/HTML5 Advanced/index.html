@@ -3,158 +3,218 @@
     <head>
         <title>Homework. HTML5 Advanced</title>
         <meta charset="utf-8">
-        <link href="css/styles.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
 		<div class="big-wrapper">
-			
 			<header>
-				<h1>Советские мультфильмы</h1>
-				<p>Конечно, у советских мультипликаторов не было тех безграничных технических возможностей при создании фильмов, что были у их западных коллег. Но от этого качество мультипликационных фильмов не становится хуже. Наоборот, именно советские мультфильмы признаны психологами самыми гармоничными, подходящими и полезными для становления и развития психики маленького человечка.</p>
+				<h1>Rock music</h1>
+				<p>
+					Rock music is a broad genre of popular music that originated as "rock and roll" in the United States in the early 1950s, and developed into a range of different styles in the 1960s and later, particularly in the United Kingdom and in the United States.[1][2] It has its roots in 1940s and 1950s rock and roll, a style which drew heavily on the African-American genres of blues and rhythm and blues, and from country music. Rock music also drew strongly on a number of other genres such as electric blues and folk, and incorporated influences from jazz, classical and other musical styles. Musically, rock has centered on the electric guitar, usually as part of a rock group with electric bass and drums and one or more singers. Typically, rock is song-based music usually with a 4/4 time signature using a verse–chorus form, but the genre has become extremely diverse. Like pop music, lyrics often stress romantic love but also address a wide variety of other themes that are frequently social or political.
+				</p>
+				<form>
+					<p>
+						<input type="search" name="q" placeholder="Что ищем?"> 
+						<input type="submit" value="Найти">
+					</p>
+				</form>
+				<form action="">				
+					<div>
+					<input placeholder="E-mail" required="" id="username" type="email">
+					<input placeholder="Пароль" required="" id="password" type="password" pattern="(?=.*\d)(?=.*[a-zа-я]).{8,}" title="Пароль должен содержать цифры и буквы, минимум 8 символов">
+					<input value="Войти" type="submit">
+					</div>
+				</form>
 			</header>
-			
 			<nav>
 				<ul>
-					<li><a href="#item_1">Чебурашка</a></li>
-					<li><a href="#item_2">Мульт2</a></li>
-					<li><a href="#item_3">Мульт3</a></li>
-					<li><a href="#item_4">Мульт4</a></li>
+					<li><a href="#item_1">THE BEATLES</a></li>
+					<li><a href="#item_2">Aerosmith</a></li>
+					<li><a href="#item_3">Scorpions</a></li>
+					<li><a href="#item_4">Red Hot Chili Peppers</a></li>
 				</ul>
 			</nav>
-			
 			<div class="wrapper">
-			
 				<section id="item_1">
 					<header>
-						<h2>Чебурашка</h2>
+						<h2>THE BEATLES</h2>
 						<p>
-							Премьера: 25 февраля 1978 г. (Финляндия)<br>
-							Режиссер: Роман Абелевич Качанов<br>
-							Композитор: Владимир Яковлевич Шаинский<br>
-							Язык: Русский язык<br>
-							Сценарий: Эдуард Николаевич Успенский, Роман Абелевич Качанов
+							The Beatles were an English rock band formed in Liverpool in 1960. With members John Lennon, Paul McCartney, George Harrison and Ringo Starr, they became widely regarded as the foremost and most influential act of the rock era.[1] Rooted in skiffle, beat and 1950s rock and roll, the Beatles later experimented with several musical styles, ranging from pop ballads and Indian music to psychedelia and hard rock, often incorporating classical elements and unconventional recording techniques in innovative ways. In 1963 their enormous popularity first emerged as "Beatlemania", and as the group's music grew in sophistication in subsequent years, led by primary songwriters Lennon and McCartney, they came to be perceived as an embodiment of the ideals shared by the counterculture of the 1960s.
 						</p>
 					</header>
-					
 					<article>
-						<h3>Серия 1. День рождения Чебурашки</h3>
-						<video  width="450" height="360" poster="img/1313930432_file6615.jpg" controls autoplay>
-         				<source src="video/ch1.mp4" type="video/mp4" />
-      					</video>
- 
- 						<h3>Серия 2. Чебурашка и Шапокляк</h3>
-						<video  width="450" height="360" poster="img/hqdefault.jpg" controls>
-         				<source src="video/ch2.mp4" type="video/mp4" />
-      					</video>
-						
-						<h3>Песня Чебурашки</h3>
-						<audio controls loop>
-							<source src="audio/Pesenka-Cheburashki.mp3" type="audio/mp3" />
+						<div class="part">
+							<h3>Something</h3>
+							<video id="video" width="300" height="200" poster="img/db4741faf4db929b34b3d84e797f34a7.jpg" controls>
+		         				<source 
+								src="http://0s.nfqtqmbqgyydi.ovzq.mfzgg2djozss433sm4.cmle.ru/31/items/THE_BEATLES_Something_1970/THE_BEATLES_Something_1970.mp4" 
+								type="video/mp4"
+								/>
+	      					</video>
+						</div>
+ 						<div class="part">
+							<h3>Revolution</h3>
+							<video width="300" height="200" poster="img/db4741faf4db929b34b3d84e797f34a7.jpg" controls>
+		         				<source 
+								src="http://0s.nfqtqmbrgyydm.ovzq.mfzgg2djozss433sm4.cmle.ru/32/items/THE_BEATLES_Revolution_1968/THE_BEATLES_Revolution_1968.mp4"
+								type="video/mp4" />
+	      					</video>
+						</div>						
+						<h3>Yesterday (Guitar Cover)</h3>
+						<audio id="audio" controls>
+							<source 
+							src="http://0s.nfqtmmbrgyydc.ovzq.mfzgg2djozss433sm4.cmle.ru/12/items/Yesterday_20170302/Yesterday.mp3" 
+							type="audio/mp3" />
 						</audio>
-						
-						<h3>Голубой вагон</h3>
-						<audio controls loop>
-							<source src="audio/goluboi-vagon.mp3" type="audio/mp3" />
+						<h3>Boys</h3>
+						<audio controls>
+							<source 
+							src="http://0s.nfqtmmbrgyydo.ovzq.mfzgg2djozss433sm4.cmle.ru/3/items/03AnnaGoToHim/05%20Boys.mp3" 
+							type="audio/mp3" 
+							/>
 						</audio>
-
 					</article>
-					
 					<footer>
-						<p>Приключения доброго крокодила Гены и его друга Чебурашки — неизвестного науке зверя, но зато доброго и милого.</p>
+						<p>&#169Wikipedia</p>
 					</footer>
-				
 				</section>
-				
 				<section id="item_2">
 					<header>
-						<h2>Мульт2</h2>
-						<p>Приключения доброго крокодила Гены и его друга Чебурашки — неизвестного науке зверя, но зато доброго и милого.</p>
-					</header>
-					
-					<article>
-					
-					</article>
-					
-					<footer>
-						<p>	
-							Премьера: 25 февраля 1978 г. (Финляндия)<br>
-							Режиссер: Роман Абелевич Качанов<br>
-							Композитор: Владимир Яковлевич Шаинский<br>
-							Язык: Русский язык<br>
-							Сценарий: Эдуард Николаевич Успенский, Роман Абелевич Качанов
+						<h2>Aerosmith</h2>
+						<p>
+							Aerosmith is an American rock band, sometimes referred to as "the Bad Boys from Boston" and "America's Greatest Rock and Roll Band". Their style, which is rooted in blues-based hard rock, has come to also incorporate elements of pop, heavy metal, and rhythm and blues, and has inspired many subsequent rock artists. They were formed in Boston, Massachusetts in 1970. Guitarist Joe Perry and bassist Tom Hamilton, originally in a band together called the Jam Band, met up with vocalist/pianist/harmonicist Steven Tyler, drummer Joey Kramer, and guitarist Ray Tabano, and formed Aerosmith. In 1971, Tabano was replaced by Brad Whitford, and the band began developing a following in Boston.
 						</p>
+					</header>
+					<article>
+						<div class="part">
+							<h3>Crazy</h3>
+							<video width="300" height="200" poster="img/fe91b9f199ab46b484fe3887459b9778.jpeg" controls>
+		         				<source 
+								src="http://0s.nfqtmmbqhayde.ovzq.mfzgg2djozss433sm4.cmle.ru/3/items/AerosmithCrazy_201707/Aerosmith%20-%20Crazy.mp4" 
+								type="video/mp4"
+								/>
+	      					</video>
+						</div>
+ 						<div class="part">
+							<h3>Cryin</h3>
+							<video width="300" height="200" poster="img/fe91b9f199ab46b484fe3887459b9778.jpeg" controls>
+		         				<source 
+								src="http://0s.nfqtmmbqgyydi.ovzq.mfzgg2djozss433sm4.cmle.ru/18/items/AerosmithCryin_201707/Aerosmith%20-%20Cryin.mp4"
+								type="video/mp4" />
+	      					</video>
+						</div>						
+						<h3>Dream On</h3>
+						<audio controls loop autoplay>
+							<source 
+							src="http://0s.nfqtqmbsguydm.ovzq.mfzgg2djozss433sm4.cmle.ru/22/items/AerosmithDreamOn/Aerosmith%20-%20Dream%20On.mp3" 
+							type="audio/mp3" />
+						</audio>
+						<h3>Livin' On The Edge</h3>
+						<audio controls>
+							<source 
+							src="http://0s.nfqtmmbqheyda.ovzq.mfzgg2djozss433sm4.cmle.ru/3/items/AerosmithLivinOnTheEdge/Aerosmith%20-%20Livin%27%20On%20The%20Edge.mp3" 
+							type="audio/mp3" 
+							/>
+						</audio>
+					</article>
+					<footer>
+						<p>&#169Wikipedia</p>
 					</footer>
-				
 				</section>
-				
 				<section id="item_3">
 					<header>
-						<h2>Мульт3</h2>
-						<p>Приключения доброго крокодила Гены и его друга Чебурашки — неизвестного науке зверя, но зато доброго и милого.</p>
-					</header>
-					
-					<article>
-					
-					</article>
-					
-					<footer>
-						<p>	
-							Премьера: 25 февраля 1978 г. (Финляндия)<br>
-							Режиссер: Роман Абелевич Качанов<br>
-							Композитор: Владимир Яковлевич Шаинский<br>
-							Язык: Русский язык<br>
-							Сценарий: Эдуард Николаевич Успенский, Роман Абелевич Качанов
+						<h2>Scorpions</h2>
+						<p>
+							Scorpions is a German rock band formed in 1965 in Hanover by Rudolf Schenker. Since the band's inception, its musical style has ranged from hard rock to heavy metal. The lineup from 1978–92 was the most successful incarnation of the group, and included Klaus Meine (vocals), Rudolf Schenker (rhythm guitar), Matthias Jabs (lead guitar), Francis Buchholz (bass guitar), and Herman Rarebell (drums). The band's only constant member has been Schenker, although Meine has been the lead singer for all of the band's studio albums, and Jabs has been a consistent member since 1979.
 						</p>
+					</header>
+					<article>
+						<div class="part">
+							<h3>Still Loving You</h3>
+							<video width="300" height="200" poster="img/Scorpions.jpg" controls>
+		         				<source 
+								src="http://0s.nfqtmmbqgyydo.ovzq.mfzgg2djozss433sm4.cmle.ru/19/items/Scorpions_Still_Loving_You/Scorpions_Still_Loving_You.mp4" 
+								type="video/mp4"
+								/>
+	      					</video>
+						</div>
+ 						<div class="part">
+							<h3>Wind Of Change</h3>
+							<video width="300" height="200" poster="img/Scorpions.jpg" controls>
+		         				<source 
+								src="http://0s.nfqtqmbqgyyds.ovzq.mfzgg2djozss433sm4.cmle.ru/32/items/Scorpions_Wind_Of_Change/Scorpions_Wind_Of_Change.mp4"
+								type="video/mp4" />
+	      					</video>
+						</div>						
+						<h3>Holiday</h3>
+						<audio id="audio" controls>
+							<source 
+							src="http://0s.nfqtmmbrguyda.ovzq.mfzgg2djozss433sm4.cmle.ru/10/items/ScorpionsHoliday_201711/Scorpions%20-%20Holiday.mp3" 
+							type="audio/mp3" />
+						</audio>
+						<h3>ALWAYS SOMEWHERE</h3>
+						<audio controls>
+							<source 
+							src="http://0s.nfqtmmbrguyda.ovzq.mfzgg2djozss433sm4.cmle.ru/1/items/SCORPIONSALWAYSSOMEWHERE_20171121/SCORPIONS%20-%20ALWAYS%20SOMEWHERE.mp3" 
+							type="audio/mp3" 
+							/>
+						</audio>
+					</article>
+					<footer>
+						<p>&#169Wikipedia</p>
 					</footer>
-				
 				</section>
-				
 				<section id="item_4">
 					<header>
-						<h2>Мульт4</h2>
-						<p>Приключения доброго крокодила Гены и его друга Чебурашки — неизвестного науке зверя, но зато доброго и милого.</p>
-					</header>
-					
-					<article>
-					
-					</article>
-					
-					<footer>
-						<p>	
-							Премьера: 25 февраля 1978 г. (Финляндия)<br>
-							Режиссер: Роман Абелевич Качанов<br>
-							Композитор: Владимир Яковлевич Шаинский<br>
-							Язык: Русский язык<br>
-							Сценарий: Эдуард Николаевич Успенский, Роман Абелевич Качанов
+						<h2>Red Hot Chili Peppers</h2>
+						<p>
+							Red Hot Chili Peppers are an American funk rock band formed in Los Angeles in 1983. The group's musical style primarily consists of rock with an emphasis on funk, as well as elements from other genres such as punk rock and psychedelic rock. When played live, their music incorporates elements of jam band due to the improvised nature of many of their performances. Currently, the band consists of founding members vocalist/rhythm guitarist Anthony Kiedis and bassist Flea, longtime drummer Chad Smith, and former touring guitarist Josh Klinghoffer. Red Hot Chili Peppers are one of the best-selling bands of all time with over 80 million records sold worldwide, have been nominated for sixteen Grammy Awards, of which they have won six, and are the most successful band in alternative rock radio history, currently holding the records for most number-one singles (13), most cumulative weeks at number one (85) and most top-ten songs (25) on the Billboard Alternative Songs chart.[1] In 2012, they were inducted into the Rock and Roll Hall of Fame.
 						</p>
+					</header>
+					<article>
+						<div class="part">
+							<h3>Give It Away</h3>
+							<video width="300" height="200" poster="img/RHCP.jpg" controls>
+		         				<source 
+								src="http://0s.nfqtqmbrgyyda.ovzq.mfzgg2djozss433sm4.cmle.ru/10/items/Red_Hot_Chili_Peppers_Give_It_Away/Red_Hot_Chili_Peppers_Give_It_Away.mp4" 
+								type="video/mp4"
+								/>
+	      					</video>
+						</div>
+ 						<div class="part">
+							<h3>Higher Ground</h3>
+							<video width="300" height="200" poster="img/RHCP.jpg" controls>
+		         				<source 
+								src="http://0s.nfqtmmbrgyydc.ovzq.mfzgg2djozss433sm4.cmle.ru/15/items/Red_Hot_Chili_Peppers_Higher_Ground/Red_Hot_Chili_Peppers_Higher_Ground.mp4"
+								type="video/mp4" />
+	      					</video>
+						</div>						
+						<h3>Californication</h3>
+						<audio id="audio" controls>
+							<source 
+							src="http://0s.nfqtqmbrgqydg.ovzq.mfzgg2djozss433sm4.cmle.ru/12/items/Californication_482/Californication.mp3" 
+							type="audio/mp3" />
+						</audio>
+						<h3>Scar Tissue</h3>
+						<audio controls>
+							<source 
+							src="http://0s.nfqtqmbrgmydq.ovzq.mfzgg2djozss433sm4.cmle.ru/15/items/RedHotChiliPeppersScarTissueAlbumVersion/Red%20Hot%20Chili%20Peppers%20-%20Scar%20Tissue%20%28Album%20Version%29.mp3" 
+							type="audio/mp3" 
+							/>
+						</audio>
+					</article>
+					<footer>
+						<p>&#169Wikipedia</p>
 					</footer>
-				
 				</section>
 			</div>
-			
 			<aside>
 				<p>Тут могла быть Ваша реклама</p>
 			</aside>
-			
 			<footer>
 				<p>2017</p>	
 			</footer>
-					
-			
+		<script src="js/script.js"></script>			
 		</div>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

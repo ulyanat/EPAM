@@ -1,0 +1,86 @@
+body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img,abbr{border:0;}address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal;}ul li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}legend{color:#000;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section, main {display:block;}
+
+body{
+	background: url(../img/background.jpg) no-repeat center fixed;
+	background-size: cover;
+	font-size: 14px;
+	font-family: 'Comic Sans MS';
+	line-height: 1.5;
+	text-align: left;
+}
+
+.big-wrapper{
+	max-width: 1200px;
+    margin: 30px auto;
+	padding: 0 30px;
+    overflow: hidden;
+	background: #E6F8E0;
+	border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav{
+	width: 19%;
+	margin:0;
+	padding: 5px;
+	float: left;
+	box-sizing: border-box;
+}
+
+.wrapper{
+	width: 60%;
+	margin:0;
+	padding: 5px;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+aside{
+	width: 19%;
+	margin:0;
+	padding: 5px;
+	float: right;
+	box-sizing: border-box;
+}
+
+nav ul{
+	list-style-type: none;
+}
+
+nav ul li{
+	padding: 5px;
+}
+
+nav a{
+	display: block;
+}
+
+
+h1, h2{
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+h1, h2, h3{
+	margin: 10px;
+}
+
+footer{
+	padding: 10px;
+	text-align: right;
+}
+
+.part{
+	box-sizing: border-box;	
+	width: 49%;
+	display: inline-block;
+}
+
+form{
+	margin: 10px 0;
+}

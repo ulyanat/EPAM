@@ -1,0 +1,95 @@
+body{
+	font-size: 16px;
+	font-family: 'Comic Sans MS';
+	line-height: 1.5;
+	text-align: center;
+	margin: 0;
+}
+
+.big-wrapper{
+	max-width: 1200px;
+    overflow: hidden;
+	margin: 0px auto;
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+}
+
+.header{
+	position: fixed;
+	width: 100%;
+	max-width: inherit;
+	background: white;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+
+.logo{
+	float: left;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.form{
+	float: right;
+	margin: 10px;
+}
+
+.search {
+	width: 200px;
+	position: relative;
+}
+
+.search .input {
+	border: 2px solid black;
+	border-radius: 20px;
+	box-sizing: border-box;	
+	width: 100%;
+	padding: 5px 10px 5px 30px;	
+}
+
+.search .submit {
+	position: absolute;
+	width: 37px;
+	height: 100%;
+	border: none;
+	background: url(https://lh4.googleusercontent.com/-b-5aBxcxarY/UAfFW9lVyjI/AAAAAAAABUg/gQtEXuPuIds/s13/go.png) 50% no-repeat;
+}
+
+.client{
+
+	float: right;
+	margin: 5px;
+}
+
+.client img{
+	height: 35px;
+}
+
+.client a{
+	display: inline-block;
+}
+
+.center{
+	margin: 51px 150px 0;
+	font-size: 0;
+}
+
+.center .category{
+	box-sizing: border-box;
+	font-size: 16px;
+	width: 15%;
+	margin: 5%;
+	display: inline-block;
+}
+
+.center .category img{
+	width: 100%;
+}
+
+.footer{
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	padding: 10px;
+}

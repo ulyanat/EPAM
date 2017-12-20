@@ -1,0 +1,179 @@
+body{
+	font-size: 16px;
+	font-family: 'Comic Sans MS';
+	line-height: 1.5;
+	text-align: center;
+	margin: 0;
+}
+
+.big-wrapper{
+	max-width: 1200px;
+    overflow: hidden;
+	margin: 0px auto;
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+	position: relative;
+}
+
+.header{
+	position: fixed;
+	width: 100%;
+	max-width: inherit;
+	background: white;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+.logo{
+	float: left;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.form{
+	float: right;
+	margin: 10px;
+}
+
+.search {
+	width: 200px;
+	position: relative;
+}
+
+.search .input {
+	border: 2px solid black;
+	border-radius: 20px;
+	box-sizing: border-box;	
+	width: 100%;
+	padding: 5px 10px 5px 30px;	
+}
+
+.search .submit {
+	position: absolute;
+	width: 37px;
+	height: 100%;
+	border: none;
+	background: url(https://lh4.googleusercontent.com/-b-5aBxcxarY/UAfFW9lVyjI/AAAAAAAABUg/gQtEXuPuIds/s13/go.png) 50% no-repeat;
+}
+
+.client{
+	float: right;
+	margin: 5px;
+}
+
+.client img{
+	height: 35px;
+}
+
+.client a{
+	display: inline-block;
+}
+
+.footer{
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	padding: 10px;
+	clear: both;
+}
+
+.menu{
+	position: fixed;
+	width: 15%;
+	box-sizing: border-box;	
+	text-align: left;
+	margin-top: 75px;
+	font-size: 0;
+}
+
+.menu .category{
+	height: 45px;
+	font-size: 16px;
+}
+
+.menu .category img{
+	height: 100%;
+	float: left;
+}
+
+.menu .category a{
+	margin: 10px;
+	display: inline-block;
+}
+
+.goods .product-wrapper p{
+	margin: 0;
+	padding:0;
+}
+
+.goods .product-wrapper {
+	margin: 0;
+	padding:0;
+}
+
+.goods-wrapper {
+	width: 85%;
+	box-sizing: border-box;	
+	display: inline-block;
+	margin-top: 55px;
+	border-left: 2px solid black;
+	float: right;
+}
+.goods{
+	width: 40%;
+	margin: 0 auto;
+}
+
+.goods .product-wrapper{
+	box-sizing: border-box;
+	font-size: 16px;
+	display: inline-block;
+	margin: 10px 0px;
+}
+
+.goods .product-wrapper img{
+	width: 33%;
+	float: left;
+}
+
+
+.goods-wrapper .button .grid-view {
+	border: none;
+	background: none;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.goods-wrapper .button{
+	text-align: right;
+	margin: 5px;
+}
+
+.goods .product-wrapper .add-to-cart{
+	border: 2px solid black;
+	border-radius: 20px;
+	cursor: pointer;
+	padding: 5px 20px;
+	font-size: 16px;
+}
+
+.goods .product{
+	overflow: hidden;
+	padding: 0 25px;
+}
+
+.goods .product-wrapper .product a{
+	float: left;
+}
+
+.goods .product-wrapper .product p{
+	float: right;
+	text-align: left;
+}
+.goods .product-wrapper .product .content{
+	margin: 15px 0px;
+}
+
+.goods .product-wrapper .product{
+	text-align: left;
+}

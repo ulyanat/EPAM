@@ -1,0 +1,47 @@
+body {
+	font-size: 18px;
+	font-family: 'Comic Sans MS';
+}
+
+.traffic-light{
+	width: 100px;
+	height: 290px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -50px;
+	margin-top: -145px;
+	background-color: silver;
+}
+
+.red, .yellow, .green{
+	width: 90px;
+	height: 90px;
+	border-radius: 50px;
+	margin: 5px;
+	opacity: 0.1;
+}
+
+.red{
+	background-color: red;
+	animation: light  1s 1 4s forwards;
+}
+
+.yellow{
+	background-color: yellow;
+	animation: light  4s 1 steps(2) 1.5s;
+}
+
+.green{
+	background-color: green;
+	animation: light  1s 4 steps(2);
+}
+
+@keyframes light {
+  0% {
+	opacity: 0.1;
+  }
+  100% {
+	opacity: 1;
+  }
+}

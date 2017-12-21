@@ -1,0 +1,91 @@
+body {
+	font-size: 18px;
+	font-family: 'Comic Sans MS';
+}
+
+.wrapper{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	margin-top: -100px;
+	border: 2px solid black;
+}
+
+.close{
+	position: absolute;
+	font-size: 30px;
+	font-weight: bold;
+	left: 380px;
+	top: -10px;
+}
+
+.login-form {
+	width: 300px;
+	margin: 0 auto;
+	position: relative;
+}
+.sign-in, .register, .close{
+	cursor: pointer;
+}
+
+.sign-in {
+	background: none;
+	border: none;
+	text-decoration: underline;
+}
+
+.username, .register, .password{
+	border: 1px solid black;
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	margin: 5px 0;
+}
+
+.register{
+	border-radius: 20px;
+	transition: background-color 1s ease-out 0.1s;
+}
+
+.footer{
+	text-align: right;
+}
+
+.content{
+	width: 300px;
+	margin-top: 40px;
+
+}
+
+.register:hover { background-color: gray; }
+
+.wrapper {
+	animation: rotate  1.5s 3;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    background-color: none;
+  }
+  25% {
+    transform: rotate(-0.5deg);
+    background-color: #E0F8F7;
+  }
+  50% {
+    transform: rotate(0deg);
+    background-color: #CEF6F5;
+  }
+  75% {
+    transform: rotate(0.5deg);
+    background-color: #E0F8F7;
+  }
+  100% {
+    transform: rotate(0deg);
+    background-color: none;
+  }
+}
+

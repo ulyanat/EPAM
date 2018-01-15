@@ -1,0 +1,131 @@
+
+.big-wrapper{
+	max-width: 1200px;
+    margin: 0px auto;
+    overflow: hidden;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.big-wrapper header, .big-wrapper footer{
+	background: gray;
+	height: 50px;
+}
+
+.wrapper nav, .wrapper aside{
+	background: silver;
+}
+
+.wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+}
+
+nav, aside{
+	flex-grow: 1;
+}
+
+main{
+	flex-grow: 5;
+	padding: 10px;
+}
+
+.wrapper nav ul li{
+	list-style-type: none;
+}
+
+.wrapper nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+.big-wrapper .wrapper main header{
+	background: none;
+}
+
+.big-wrapper .wrapper main header, .big-wrapper .wrapper main .now-deg{
+	font-size: 42px;
+	font-weight: bold;	
+}
+
+.big-wrapper .wrapper main img{
+	width: 60px;
+}
+
+.forecast-wrapper, .forecast, .days, .temp, .pollen, .day{
+	display: flex;
+}
+
+.forecast-td, .day{
+	flex-direction: column;
+}
+
+.forecast-td div{
+	margin: 5px 0;
+}
+
+.forecast-td .forecast .now-deg{
+	margin: 5px;
+}
+
+.gray{
+	color: gray;
+}
+
+.forecast-td, .forecast-in-detail{
+	flex-grow: 1;
+}
+
+.forecast-in-detail{
+	align-self: flex-end;
+}
+
+.day{
+	align-items: center;
+}
+
+.day div{
+	padding: 2px;
+}
+
+.day .day-name, .day .temp-day{
+	font-weight: bold;
+}
+
+.days{
+	justify-content: space-around;
+}
+
+.days, .forecast-wrapper{
+	margin: 15px 0;
+}
+
+@media screen and (max-width: 768px){
+	.days{
+		flex-direction: column;
+	}
+	.days .day{
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: stretch;
+	}
+	.days .day .day-name, .days .day .image, .days .day .temp, .days .day .pollen, .days .day .temp-day, .days .day .temp-night{	
+		flex-grow: 1;
+	}
+	
+	.days .day .day-name{
+		flex-basis: 80px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.wrapper{
+		display: block;
+	}
+	
+	.days .day .temp, .days .day .pollen{
+		flex-direction: column;
+		align-items: center;
+	}
+}

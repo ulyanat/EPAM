@@ -235,17 +235,15 @@ function multiplyOrThrow(a, b) {
   if (Math.random() < 0.5) {
     return a * b;
   } else {
-    throw new Error;
+    throw 'MultiplicatorUnitFailure';
   }
 }
 
 function multiply(a, b) {
 	try {
 		return multiplyOrThrow(a, b);
-	} catch (e) {
-		if (e.name == "Error"){
-			return multiply(a, b);
-		}
+	} catch (MultiplicatorUnitFailure) {
+		return multiply(a, b);
 	}
 }
 console.log(multiply(2, 3));
@@ -348,9 +346,8 @@ console.log(getNames(new Date(2018, 0, 25)));
 */
 
 function differenceInYears(date1, date2){
-	var v = Math.abs(Math.trunc(((date1 - date2)/31536000000)/4));
-	var res = Math.abs(Math.trunc(((date1 - date2)+86400000*v)/31536000000));
+	var res = +Math.abs((date1 - date2)/31536000000).toFixed(2);
 	return res;
 }
-console.log(differenceInYears(new Date(2014,10,2), new Date(2016,10,2)));
+console.log(differenceInYears(new Date(2014,10), new Date(2016,10)));
 

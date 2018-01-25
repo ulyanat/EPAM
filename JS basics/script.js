@@ -244,7 +244,6 @@ function multiply(a, b) {
 		return multiplyOrThrow(a, b);
 	} catch (e) {
 		if (e.name == "Error"){
-			alert('false');
 			return multiply(a, b);
 		}
 	}

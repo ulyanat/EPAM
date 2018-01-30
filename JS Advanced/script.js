@@ -42,6 +42,52 @@ b.	prev - возвращает и уменьшает значение счетч
 [Дополнительно] Счетчик должен хранить в истории значений счетчика последние 10.
 */
 
+function makeCounter() {
+	var currentCount = 0;
+	var arr = [];
+	
+	function historyCounter(){
+		if (arr.length >= 10) arr = [];
+		arr.push(currentCount);
+	}
+
+	return {
+		next: function() {
+			++currentCount;
+			historyCounter();
+			return currentCount;
+		},
+
+		prev: function() {
+			--currentCount;
+			historyCounter();
+			return currentCount;
+		},
+
+		history: function() {
+			return arr;			
+		}
+	};
+}
+
+var counter = makeCounter();
+
+console.log( counter.next() );
+console.log( counter.next() ); 
+console.log( counter.next() ); 
+console.log( counter.history() );
+console.log( counter.prev() ); 
+console.log( counter.prev() );
+console.log( counter.next() );
+console.log( counter.next() );
+console.log( counter.next() );
+console.log( counter.history() );
+console.log( counter.next() );
+console.log( counter.next() );
+console.log( counter.next() );
+console.log( counter.next() );
+console.log( counter.history() );
+
 /*
 4.	Контекст вызова и карринг:
 function sumWith(number) {

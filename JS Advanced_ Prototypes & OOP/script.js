@@ -74,6 +74,8 @@ MonsterTruck
 function Vehical(name){
 	this.name = name;
 	this.speed = 0;
+	Vehical.prototype.valueOf = function() { console.log('Метод valueOf переопределен'); };
+	Vehical.prototype.toString = function() { console.log('Метод toString переопределен'); };
 }
 
 Vehical.prototype.stop = function(){
@@ -88,6 +90,7 @@ Vehical.prototype.move = function(speed) {
 
 function Bike(name){
 	Vehical.call(this);
+	this.name = name;
 	this.wheelsCount = 2;
 }
 
@@ -111,9 +114,16 @@ bike.move();
 
 function Car(name){
 	Vehical.call(this);
+	this.name = name;
 	this.wheelsCount = 4;
 	this.doorsCount = 4;
 	this.openDoors = 0;
+	Car.count++;
+}
+
+Car.count = 0;
+Car.showCount = function() {
+	console.log( this.count );
 }
 
 Car.prototype = Object.create(Vehical.prototype);
@@ -154,6 +164,7 @@ car.closeDoor();
 
 function MonsterTruck(name){
 	Car.call(this);
+	this.name = name;
 	this.wheelsSize = 66;
 }
 
@@ -162,16 +173,18 @@ MonsterTruck.prototype.constructor = MonsterTruck;
 
 MonsterTruck.prototype.openDoor = function(){
 	var func = function() { return Car.prototype.openDoor.apply(this, arguments)}.bind(this);
-	setTimeout(function() { func(); }, 10000);
+	setTimeout(function() { func(); }, 1000);
 }
 
 var monster = new MonsterTruck('1st_MonsterTruck');
-
+/*
 monster.openDoor();
 monster.openDoor();
 monster.openDoor();
 monster.openDoor();
 monster.openDoor();
+*/
+Car.showCount();
 
 /*
 3.	Используя функциональное наследование повторить задачу из п2.

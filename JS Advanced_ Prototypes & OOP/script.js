@@ -91,13 +91,13 @@ function Bike(name){
 	this.wheelsCount = 2;
 }
 
- Bike.prototype.move = function(){
+Bike.prototype = Object.create(Vehical.prototype);
+Bike.prototype.constructor = Bike;
+
+Bike.prototype.move = function(){
   	Vehical.prototype.move.apply(this, arguments);
   	console.log('**звук разгона**');  
 }
-
-Bike.prototype = Object.create(Vehical.prototype);
-Bike.prototype.constructor = Bike;
 
 var bike = new Bike('1st_bike');
 /*
@@ -154,16 +154,16 @@ car.closeDoor();
 
 function MonsterTruck(name){
 	Car.call(this);
-	wheelsSize: 66;
-	var parentOpenDoor = this.openDoor;
-}
-
-MonsterTruck.prototype.openDoor = function(){
-	setTimeout(Car.prototype.openDoor.apply(this, arguments), 1000);
+	this.wheelsSize = 66;
 }
 
 MonsterTruck.prototype = Object.create(Car.prototype);
 MonsterTruck.prototype.constructor = MonsterTruck;
+
+MonsterTruck.prototype.openDoor = function(){
+	var func = function() { return Car.prototype.openDoor.apply(this, arguments)}.bind(this);
+	setTimeout(function() { func(); }, 10000);
+}
 
 var monster = new MonsterTruck('1st_MonsterTruck');
 

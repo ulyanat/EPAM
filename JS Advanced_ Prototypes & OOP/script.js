@@ -87,14 +87,13 @@ Vehical.prototype.move = function(speed) {
 }
 
 function Bike(name){
-	this.name = name;
-	this.speed = 0;
+	Vehical.call(this);
 	this.wheelsCount = 2;
-	var parentMove = this.move;
-	this.move = function(){
-		parentMove.call(this);
-		console.log('**звук разгона**')	
-	}
+}
+
+ Bike.prototype.move = function(){
+  	Vehical.prototype.move.apply(this, arguments);
+  	console.log('**звук разгона**');  
 }
 
 Bike.prototype = Object.create(Vehical.prototype);
@@ -111,8 +110,7 @@ bike.move();
 */
 
 function Car(name){
-	this.name = name;
-	this.speed = 0;
+	Vehical.call(this);
 	this.wheelsCount = 4;
 	this.doorsCount = 4;
 	this.openDoors = 0;
@@ -155,23 +153,14 @@ car.closeDoor();
 */
 
 function MonsterTruck(name){
-	this.name = name;
-	this.speed = 0;
+	Car.call(this);
 	wheelsSize: 66;
-		this.openDoors = 0;
 	var parentOpenDoor = this.openDoor;
-	this.openDoor = function(){
+}
 
-		setTimeout(function(){ 
-			parentOpenDoor.call(this);
-		}, 1000);
-		/*
-		setTimeout(function run() {
-			parentOpenDoor.call(this);
-		setTimeout(run, 1000);
-		}, 1000);*/
-	}
-};
+MonsterTruck.prototype.openDoor = function(){
+	setTimeout(Car.prototype.openDoor.apply(this, arguments), 1000);
+}
 
 MonsterTruck.prototype = Object.create(Car.prototype);
 MonsterTruck.prototype.constructor = MonsterTruck;

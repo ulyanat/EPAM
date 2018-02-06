@@ -190,6 +190,118 @@ Car.showCount();
 3.	Используя функциональное наследование повторить задачу из п2.
 */
 
+function Vehical(name){
+	this.name = name;
+	this.speed = 0;
+
+	this.stop = function(){
+		this.speed = 0;
+		console.log(this.name + ' is stopped');
+	}
+    
+	this.move = function(speed) {
+		this.speed++;
+		console.log( this.name + ' is moving, speed ' + this.speed );
+	}
+    
+	this.valueOf = function() { console.log('Метод valueOf переопределен'); };
+	this.toString = function() { console.log('Метод toString переопределен'); };
+}
+
+function Bike(name){
+	Vehical.call(this);
+	this.name = name;
+	this.wheelsCount = 2;
+
+	var parentMove = this.move;
+	this.move = function(){
+		parentMove.call(this);
+		console.log('**звук разгона**');  
+	}
+}
+
+var bike = new Bike('1st_bike');
+
+/*
+bike.move();
+bike.move();
+bike.move();
+bike.move();
+bike.stop();
+bike.move();
+*/
+
+function Car(name){
+	Vehical.call(this);
+	this.name = name;
+	this.wheelsCount = 4;
+	this.doorsCount = 4;
+	this.openDoors = 0;
+	Car.count++;
+	
+	this.openDoor = function(){
+		if (this.openDoors >= this.doorsCount){
+			console.log('Все двери открыты!');
+			return;
+		}
+		this.openDoors++;
+		console.log('Открыто ' + this.openDoors + ' дверей');
+	}
+
+	this.closeDoor = function(){
+		if (this.openDoors <= 0){
+			console.log('Все двери закрыты!');
+			return;
+		}
+		this.openDoors--;
+		console.log('Закрыто ' + (this.doorsCount - this.openDoors) + ' дверей');
+	}  
+}
+
+Car.count = 0;
+Car.showCount = function() {
+	console.log( this.count );
+}
+
+var car = new Car('1st_car');
+
+/*
+car.openDoor();
+car.openDoor();
+car.openDoor();
+car.openDoor();
+car.openDoor();
+car.openDoor();
+car.closeDoor();
+car.closeDoor();
+car.closeDoor();
+car.closeDoor();
+car.closeDoor();
+*/
+
+function MonsterTruck(name){
+	Car.call(this);
+	this.name = name;
+	this.wheelsSize = 66;
+	
+	var parentOpenDoor = this.openDoor;
+	this.openDoor = function(){
+		var func = function() { return parentOpenDoor.call(this)}.bind(this);
+		setTimeout(function() { func(); }, 1000);
+	}
+}
+
+var monster = new MonsterTruck('1st_MonsterTruck');
+/*
+monster.openDoor();
+monster.openDoor();
+monster.openDoor();
+monster.openDoor();
+monster.openDoor();
+*/
+
+Car.showCount();
+
 /*
 4.	Исправтьте ошибки в коде
 a.	https://jsbin.com/qajajoseka/edit?js,console 

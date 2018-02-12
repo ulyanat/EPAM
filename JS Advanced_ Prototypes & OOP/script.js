@@ -89,7 +89,7 @@ Vehical.prototype.move = function(speed) {
 }
 
 function Bike(name){
-	Vehical.call(this);
+	Vehical.apply(this, arguments);
 	this.name = name;
 	this.wheelsCount = 2;
 	Bike.prototype.valueOf = function() { return 'Метод valueOf класса Bike переопределен'; };
@@ -115,7 +115,7 @@ bike.move();
 */
 
 function Car(name){
-	Vehical.call(this);
+	Vehical.apply(this, arguments);
 	this.name = name;
 	this.wheelsCount = 4;
 	this.doorsCount = 4;
@@ -167,7 +167,7 @@ car.closeDoor();
 */
 
 function MonsterTruck(name){
-	Car.call(this);
+	Car.apply(this, arguments);
 	this.name = name;
 	this.wheelsSize = 66;
 	MonsterTruck.prototype.valueOf = function() { return 'Метод valueOf класса MonsterTruck переопределен'; };

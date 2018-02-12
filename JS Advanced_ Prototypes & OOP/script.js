@@ -74,8 +74,8 @@ MonsterTruck
 function Vehical(name){
 	this.name = name;
 	this.speed = 0;
-	Vehical.prototype.valueOf = function() { console.log('Метод valueOf переопределен'); };
-	Vehical.prototype.toString = function() { console.log('Метод toString переопределен'); };
+	Vehical.prototype.valueOf = function() { return 'Метод valueOf класса Vehical переопределен'; };
+	Vehical.prototype.toString = function() { return 'Метод toString класса Vehical переопределен'; };
 }
 
 Vehical.prototype.stop = function(){
@@ -92,6 +92,8 @@ function Bike(name){
 	Vehical.call(this);
 	this.name = name;
 	this.wheelsCount = 2;
+	Bike.prototype.valueOf = function() { return 'Метод valueOf класса Bike переопределен'; };
+	Bike.prototype.toString = function() { return 'Метод toString класса Bike переопределен'; };
 }
 
 Bike.prototype = Object.create(Vehical.prototype);
@@ -119,6 +121,8 @@ function Car(name){
 	this.doorsCount = 4;
 	this.openDoors = 0;
 	Car.count++;
+	Car.prototype.valueOf = function() { return 'Метод valueOf класса Car переопределен'; };
+	Car.prototype.toString = function() { return 'Метод toString класса Car переопределен'; };
 }
 
 Car.count = 0;
@@ -166,6 +170,8 @@ function MonsterTruck(name){
 	Car.call(this);
 	this.name = name;
 	this.wheelsSize = 66;
+	MonsterTruck.prototype.valueOf = function() { return 'Метод valueOf класса MonsterTruck переопределен'; };
+	MonsterTruck.prototype.toString = function() { return 'Метод toString класса MonsterTruck переопределен'; };
 }
 
 MonsterTruck.prototype = Object.create(Car.prototype);
@@ -204,8 +210,8 @@ function Vehical(name){
 		console.log( this.name + ' is moving, speed ' + this.speed );
 	}
     
-	this.valueOf = function() { console.log('Метод valueOf переопределен'); };
-	this.toString = function() { console.log('Метод toString переопределен'); };
+	this.valueOf = function() { return 'Метод valueOf класса Vehical переопределен'; };
+	this.toString = function() { return 'Метод toString класса Vehical переопределен'; };
 }
 
 function Bike(name){
@@ -218,6 +224,8 @@ function Bike(name){
 		parentMove.call(this);
 		console.log('**звук разгона**');  
 	}
+	this.valueOf = function() { return 'Метод valueOf класса Bike переопределен'; };
+	this.toString = function() { return 'Метод toString класса Bike переопределен'; };
 }
 
 var bike = new Bike('1st_bike');
@@ -255,7 +263,9 @@ function Car(name){
 		}
 		this.openDoors--;
 		console.log('Закрыто ' + (this.doorsCount - this.openDoors) + ' дверей');
-	}  
+	} 
+	this.valueOf = function() { return 'Метод valueOf класса Car переопределен'; };
+	this.toString = function() { return 'Метод toString класса Car переопределен'; };
 }
 
 Car.count = 0;
@@ -289,6 +299,8 @@ function MonsterTruck(name){
 		var func = function() { return parentOpenDoor.call(this)}.bind(this);
 		setTimeout(function() { func(); }, 1000);
 	}
+	this.valueOf = function() { return 'Метод valueOf класса MonsterTruck переопределен'; };
+	this.toString = function() { return 'Метод toString класса MonsterTruck переопределен'; };
 }
 
 var monster = new MonsterTruck('1st_MonsterTruck');

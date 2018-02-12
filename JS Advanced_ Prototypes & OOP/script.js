@@ -226,7 +226,7 @@ function Bike(name){
 	this.valueOf = function() { return 'Метод valueOf класса Bike переопределен'; };
 	this.toString = function() { return 'Метод toString класса Bike переопределен'; };
 }
-
+Bike.prototype = Object.create(Vehical.prototype);
 var bike = new Bike('1st_bike');
 
 /*
@@ -271,7 +271,7 @@ Car.count = 0;
 Car.showCount = function() {
 	console.log( this.count );
 }
-
+Car.prototype = Object.create(Vehical.prototype);
 var car = new Car('1st_car');
 
 /*
@@ -300,7 +300,7 @@ function MonsterTruck(name){
 	this.valueOf = function() { return 'Метод valueOf класса MonsterTruck переопределен'; };
 	this.toString = function() { return 'Метод toString класса MonsterTruck переопределен'; };
 }
-
+MonsterTruck.prototype = Object.create(Car.prototype);
 var monster = new MonsterTruck('1st_MonsterTruck');
 /*
 monster.openDoor();

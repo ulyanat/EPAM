@@ -178,8 +178,7 @@ MonsterTruck.prototype = Object.create(Car.prototype);
 MonsterTruck.prototype.constructor = MonsterTruck;
 
 MonsterTruck.prototype.openDoor = function(){
-	var func = function() { return Car.prototype.openDoor.apply(this, arguments)}.bind(this);
-	setTimeout(function() { func(); }, 1000);
+	setTimeout(Car.prototype.openDoor.bind(this), 1000);
 }
 
 var monster = new MonsterTruck('1st_MonsterTruck');
@@ -296,8 +295,7 @@ function MonsterTruck(name){
 	
 	var parentOpenDoor = this.openDoor;
 	this.openDoor = function(){
-		var func = function() { return parentOpenDoor.call(this)}.bind(this);
-		setTimeout(function() { func(); }, 1000);
+		setTimeout(parentOpenDoor.bind(this), 1000);
 	}
 	this.valueOf = function() { return 'Метод valueOf класса MonsterTruck переопределен'; };
 	this.toString = function() { return 'Метод toString класса MonsterTruck переопределен'; };

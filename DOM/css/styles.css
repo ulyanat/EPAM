@@ -1,0 +1,60 @@
+html, body, ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+.gallery{
+    width: 700px;
+	margin: 0 auto;
+}
+
+.gallery .big-picture img{
+    width: 100%;
+	border-radius: 10px;
+}
+
+.gallery .big-picture {
+    height: 550px;
+	overflow: hidden;
+}
+
+.gallery .wrapper .photos img{
+	display: inline-block;
+    width: 110px;
+	height: 90px;
+	box-sizing: border-box;
+	border: 5px solid white;
+	border-radius: 10px;
+	opacity: 0.5;
+}
+
+.gallery .wrapper .photos .active{
+	border: 5px solid green;
+	opacity: 1;
+}
+
+.gallery .wrapper .photos{
+	display:  flex;
+    flex-wrap:  wrap;
+}
+
+.gallery .wrapper {
+	display: flex;
+    justify-content: space-between;
+
+}
+
+.gallery .wrapper button:hover{
+    cursor: pointer;
+}
+
+.gallery .wrapper .photos:hover{
+    cursor: pointer;
+}
+
+.gallery .wrapper button{
+    cursor: pointer;
+	border-radius: 10px;
+	height: 50%;
+	align-self: center;
+}
